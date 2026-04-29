@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wie reguliert ist dein Nervensystem? | Lisa Goldschmidt</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: #f7f4ef;
+      color: #3a3a3a;
+      min-height: 100vh;
+      padding: 40px 20px 80px;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .logo {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .logo img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+    }
+
+    .logo-name {
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: #2d4a3e;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+
+    .logo-title {
+      text-align: center;
+      font-size: 14px;
+      color: #8a7e6e;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .contact-bar {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 14px;
+      color: #8a7e6e;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .contact-bar a {
+      color: #5a8a72;
+      text-decoration: none;
+    }
+
+    .contact-bar a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero */
+    .hero {
+      background: #fff;
+      border-radius: 20px;
+      padding: 48px 40px;
+      box-shadow: 0 4px 40px rgba(0,0,0,0.07);
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .gold-line {
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #C9A84C, transparent);
+      margin: 0 auto 20px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: linear-gradient(135deg, #f5e6c0, #fdf3dc);
+      color: #9a7830;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border-radius: 99px;
+      margin-bottom: 24px;
+      border: 1px solid #C9A84C44;
+    }
+
+    h1 {
+      font-size: 30px;
+      color: #2d4a3e;
+      line-height: 1.35;
+      margin-bottom: 20px;
+    }
+
+    .hero-text {
+      font-size: 17px;
+      color: #6a6055;
+      line-height: 1.75;
+      margin-bottom: 36px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #C9A84C, #e8c96a, #C9A84C);
+      color: #fff;
+      font-family: 'Georgia', serif;
+      font-size: 17px;
+      padding: 16px 40px;
+      border-radius: 99px;
+      text-decoration: none;
+      transition: opacity 0.2s ease, transform 0.1s ease;
+      box-shadow: 0 4px 20px rgba(201,168,76,0.35);
+      letter-spacing: 0.5px;
+    }
+
+    .cta-btn:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    .cta-note {
+      margin-top: 14px;
+      font-size: 13px;
+      color: #9a9080;
+    }
+
+    /* Problem-Block */
+    .section {
+      background: #fff;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 4px 40px rgba(0,0,0,0.07);
+      margin-bottom: 24px;
+    }
+
+    .section h2 {
+      font-size: 22px;
+      color: #2d4a3e;
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+
+    .check-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 16px;
+      color: #5a5045;
+      line-height: 1.55;
+    }
+
+    .check-list li::before {
+      content: "•";
+      color: #5a8a72;
+      font-size: 20px;
+      line-height: 1.2;
+      flex-shrink: 0;
+    }
+
+    /* Über Lisa */
+    .about {
+      background: #2d4a3e;
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 24px;
+      color: #e8f0eb;
+    }
+
+    .about h2 {
+      font-size: 22px;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .about p {
+      font-size: 16px;
+      line-height: 1.75;
+      color: #c8dbd0;
+      margin-bottom: 14px;
+    }
+
+    .about p:last-child {
+      margin-bottom: 0;
+    }
+
+    .about .highlight {
+      color: #fff;
+      font-style: italic;
+    }
+
+    /* Was das Quiz bringt */
+    .quiz-info h2 {
+      font-size: 22px;
+      color: #2d4a3e;
+      margin-bottom: 20px;
+    }
+
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .step-number {
+      background: linear-gradient(135deg, #C9A84C, #e8c96a);
+      color: #fff;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(201,168,76,0.3);
+    }
+
+    .step-text {
+      font-size: 16px;
+      color: #5a5045;
+      line-height: 1.55;
+      padding-top: 4px;
+    }
+
+    /* Bottom CTA */
+    .bottom-cta {
+      background: #fff;
+      border-radius: 20px;
+      padding: 48px 40px;
+      box-shadow: 0 4px 40px rgba(0,0,0,0.07);
+      text-align: center;
+      margin-top: 8px;
+    }
+
+    .bottom-cta h2 {
+      font-size: 24px;
+      color: #2d4a3e;
+      margin-bottom: 16px;
+      line-height: 1.4;
+    }
+
+    .bottom-cta p {
+      font-size: 16px;
+      color: #7a7060;
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+
+    /* Responsive */
+    @media (max-width: 520px) {
+      .hero, .section, .about, .bottom-cta { padding: 32px 24px; }
+      h1 { font-size: 24px; }
+      .about h2, .section h2, .bottom-cta h2, .quiz-info h2 { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="logo">
+      <img src="logo.png" alt="BePatient – stressfrei-er-leben" />
+    </div>
+    <div class="logo-name">Lisa Goldschmidt</div>
+    <div class="gold-line"></div>
+    <div class="logo-title">Heilpraktikerin · Osteopathie · Stressmanagement</div>
+    <div class="contact-bar">
+      <a href="tel:015901974975">0159 01974975</a>
+      <a href="mailto:lisa.goldschmidt@stressfrei-er-leben.de">lisa.goldschmidt@stressfrei-er-leben.de</a>
+      <a href="https://www.stressfrei-er-leben.de" target="_blank">stressfrei-er-leben.de</a>
+    </div>
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="tag">Kostenloser Selbsttest</div>
+      <h1>Wie reguliert ist dein Nervensystem wirklich?</h1>
+      <p class="hero-text">
+        Dein Körper sendet Signale — manchmal laut, manchmal leise.
+        Dieser Test hilft dir zu verstehen, was dahintersteckt.
+        In 3 Minuten. Ehrlich. Ohne Fachchinesisch.
+      </p>
+      <a href="index.html" class="cta-btn">Jetzt Quiz starten →</a>
+      <p class="cta-note">21 Fragen · 3 Minuten · kostenlos</p>
+    </div>
+
+    <!-- Problem -->
+    <div class="section">
+      <h2>Kennst du das?</h2>
+      <ul class="check-list">
+        <li>Du bist erschöpft — aber zur Ruhe kommen fällt dir schwer.</li>
+        <li>Du hast Verspannungen, Kopfschmerzen oder Bauchprobleme, und der Arzt findet nichts.</li>
+        <li>Du funktionierst nach außen hin gut — innerlich läuft aber etwas auf Hochtouren.</li>
+        <li>Du weißt, dass Stress eine Rolle spielt, aber du weißt nicht wo du anfangen sollst.</li>
+        <li>Du hast das Gefühl, dein Körper will dir etwas sagen — du verstehst ihn nur nicht.</li>
+      </ul>
+    </div>
+
+    <!-- Über Lisa -->
+    <div class="about">
+      <h2>Hallo, ich bin Lisa.</h2>
+      <p>
+        Ich bin Heilpraktikerin mit dem Schwerpunkt Osteopathie — und ich helfe Menschen,
+        ihre Körpersymptome zu übersetzen und sie auf ihrem Heilungsweg zu begleiten.
+      </p>
+      <p>
+        Ich kenne das Gefühl, das du vielleicht gerade spürst. Mit 27 hatte ich selbst einen Burnout.
+        Mein Körper hat lange gesprochen, bevor ich zugehört habe.
+      </p>
+      <p class="highlight">
+        Heute weiß ich: Der Körper lügt nicht. Er braucht manchmal nur jemanden,
+        der seine Sprache versteht.
+      </p>
+    </div>
+
+    <!-- Was das Quiz bringt -->
+    <div class="section quiz-info">
+      <h2>Was dich erwartet</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-text">Du beantwortest 20 kurze Fragen zu deinem Alltag, deinem Körper und deinem Erleben.</div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-text">Du erfährst, wie reguliert dein Nervensystem gerade ist — in verständlicher Sprache, ohne Fachbegriffe.</div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-text">Du bekommst passende erste Schritte direkt in dein Postfach — kostenlos, persönlich, umsetzbar.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="bottom-cta">
+      <h2>Dein Körper wartet schon eine Weile.</h2>
+      <p>Es dauert nur 3 Minuten — und es könnte der erste Schritt sein, ihn endlich zu verstehen.</p>
+      <a href="index.html" class="cta-btn">Quiz starten →</a>
+      <p class="cta-note">Kein Spam. Kein Verkaufsdruck. Nur ehrliche Infos.</p>
+    </div>
+
+  </div>
+</body>
+</html>
