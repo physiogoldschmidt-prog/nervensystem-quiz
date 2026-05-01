@@ -283,6 +283,37 @@
       line-height: 2;
     }
 
+    .result-uebungen {
+      text-align: left;
+      margin-bottom: 28px;
+    }
+
+    .result-uebungen h3 {
+      font-size: 16px;
+      color: #2d4a3e;
+      margin-bottom: 16px;
+    }
+
+    .uebung {
+      background: #f7f4ef;
+      border-left: 3px solid #5a8a72;
+      border-radius: 0 12px 12px 0;
+      padding: 20px;
+      margin-bottom: 14px;
+    }
+
+    .uebung h4 {
+      font-size: 15px;
+      color: #2d4a3e;
+      margin-bottom: 10px;
+    }
+
+    .uebung p {
+      font-size: 14px;
+      color: #5a5045;
+      line-height: 1.8;
+    }
+
     .email-note {
       font-size: 14px;
       color: #8a7e6e;
@@ -522,32 +553,96 @@ function getKategorie(score) {
     klasse: 'cat-gut',
     icon: '🌿',
     titel: 'Dein Nervensystem ist gut reguliert',
-    text: 'Du hast eine starke innere Basis. Dein Nervensystem kann gut zwischen Anspannung und Entspannung wechseln — das ist eine wertvolle Ressource. Du regenerierst dich nach Stress gut und hast Zugang zu echtem Wohlbefinden. Deine Aufgabe ist es, diese Balance zu pflegen und tief zu verankern.',
-    tips: ['Baue Achtsamkeitspraktiken in deinen Alltag ein um deine Regulationsfähigkeit zu vertiefen', 'Körperliche Bewegung wie Yoga oder Schwimmen stärkt den Vagusnerv weiter', 'Schütze bewusst deine Erholungszeiten — auch wenn alles gut läuft', 'Teile deine Ressourcen mit anderen — ko-Regulation ist ein Geschenk']
+    text: 'Du hast eine starke innere Basis. Dein Nervensystem kann gut zwischen Anspannung und Entspannung wechseln — das ist eine wertvolle Ressource. Du regenerierst dich nach Stress gut und hast Zugang zu echtem Wohlbefinden. Deine Aufgabe jetzt ist es, diese Balance nicht als selbstverständlich zu nehmen, sondern sie bewusst zu pflegen und noch tiefer zu verankern.',
+    tips: [
+      'Baue täglich kleine Achtsamkeitsmomente ein — schon 2 Minuten bewusstes Atmen verändern die Qualität deines Nervensystems',
+      'Bewegung wie Yoga, Schwimmen oder Tanzen stärkt den Vagusnerv weiter und vertieft deine Regulationsfähigkeit',
+      'Schütze deine Erholungszeiten aktiv — auch wenn alles gut läuft, braucht das Nervensystem echte Pausen',
+      'Teile deine Ruhe mit Menschen um dich herum — Ko-Regulation ist eines der wirksamsten Werkzeuge die wir haben',
+      'Bleibe neugierig auf deinen Körper — er zeigt dir immer als Erstes, wenn sich etwas verschiebt'
+    ],
+    uebungen: [
+      {
+        titel: 'Vagusnerv-Aktivierung durch Summen',
+        beschreibung: 'Das Summen aktiviert den Vagusnerv direkt über die Vibrationen im Kehlkopf — sanft, wirksam und überall möglich. Setze dich bequem hin und schließe die Augen. Atme tief durch die Nase ein. Beim Ausatmen summst du einen langen, gleichmäßigen Ton — wie ein leises „Mmmmm". Spüre die Vibration in deiner Brust, deinem Hals und deinem Schädel. Lass den Ton so lange klingen wie dein Atem reicht. Wiederhole das 6–8 Mal. Du kannst verschiedene Tonhöhen ausprobieren und beobachten, wo die Vibration am tiefsten zu spüren ist. Viele Menschen bemerken danach eine deutliche Weite im Brustkorb und eine Stille im Kopf.'
+      },
+      {
+        titel: 'Body-Scan zur Vertiefung der Körperwahrnehmung',
+        beschreibung: 'Lege dich auf den Rücken oder sitze aufrecht mit geschlossenen Augen. Beginne an deinen Fußsohlen und wandere langsam mit deiner Aufmerksamkeit nach oben — Zehen, Fußrücken, Knöchel, Waden, Knie. Nicht bewerten, nur wahrnehmen. Was spürst du? Wärme oder Kühle? Druck oder Leichte? Kribbeln oder Taubheit? Nimm dir für jeden Bereich ein paar Atemzüge Zeit. Wenn Gedanken kommen, lass sie wie Wolken weiterziehen und kehre sanft zur Körperstelle zurück. Der gesamte Scan dauert 10–15 Minuten. Je regelmäßiger du ihn machst, desto feiner wird deine Wahrnehmung für das, was dein Körper dir sagt.'
+      }
+    ]
   };
   if (score >= 55) return {
     name: 'Mäßig reguliert',
     klasse: 'cat-maessig',
     icon: '🌾',
     titel: 'Dein Nervensystem zeigt erste Zeichen von Überlastung',
-    text: 'Du funktionierst — aber manchmal spürst du, dass etwas nicht stimmt. Dein Nervensystem ist teilweise in einem chronischen Aktivierungszustand, aus dem es sich nicht vollständig erholen kann. Das kostet Energie. Die gute Nachricht: Mit gezielten Impulsen kannst du dein System wieder in Balance bringen.',
-    tips: ['Starte morgens mit 5 Minuten langsamem, tiefem Atmen durch die Nase', 'Kaltes Wasser im Gesicht oder am Hals kann das Nervensystem schnell beruhigen', 'Reduziere bewusst Reize — weniger Bildschirm, weniger Lärm, mehr Natur', 'Osteopathie kann tief festgehaltene Spannungsmuster im Körper lösen']
+    text: 'Du funktionierst — aber manchmal spürst du, dass etwas nicht ganz stimmt. Dein Nervensystem befindet sich teilweise in einem chronischen Aktivierungszustand, aus dem es sich nicht mehr vollständig erholen kann. Das kostet Energie, ohne dass du es direkt merkst. Die gute Nachricht: Dein System ist noch nah an der Balance. Mit gezielten, regelmäßigen Impulsen kannst du es wieder dorthin zurückführen.',
+    tips: [
+      'Starte morgens mit 5 Minuten langsamem, tiefem Atmen durch die Nase — das gibt deinem Nervensystem von Beginn an die richtige Richtung',
+      'Kaltes Wasser im Gesicht oder am Hals aktiviert den Tauchreflex und kann dein System innerhalb von Sekunden beruhigen',
+      'Reduziere bewusst Reize in deinem Alltag — weniger Bildschirm, weniger Lärm, mehr Momente in der Natur',
+      'Osteopathie kann tief im Körper festgehaltene Spannungsmuster lösen, die du alleine nicht erreichst',
+      'Plane jeden Tag eine echte Pause — auch 10 Minuten Stille ohne Handy können langfristig viel verändern'
+    ],
+    uebungen: [
+      {
+        titel: '4-7-8 Atmung — der natürliche Beruhigungsschalter',
+        beschreibung: 'Diese Atemtechnik wirkt wie ein Schalter für dein parasympathisches Nervensystem. Setze dich aufrecht hin, die Hände locker auf den Oberschenkeln. Atme 4 Sekunden lang ruhig durch die Nase ein. Halte den Atem sanft für 7 Sekunden an — ohne Druck, ohne Anspannung. Atme dann 8 Sekunden lang durch den leicht geöffneten Mund aus, als würdest du durch einen Strohhalm blasen. Das Verhältnis 4-7-8 ist entscheidend: die lange Ausatmung aktiviert den Vagusnerv und signalisiert deinem Körper Sicherheit. Wiederhole die Sequenz 4 Mal. Am Anfang kann das Anhalten ungewohnt sein — bleibe sanft dabei. Schon nach wenigen Tagen wirst du merken, wie dein System schneller zur Ruhe findet.'
+      },
+      {
+        titel: 'Schulter- und Nackenentspannung',
+        beschreibung: 'Chronischer Stress sammelt sich besonders gerne in Schultern, Nacken und Kiefer. Diese Übung löst genau dort. Setze dich aufrecht hin und lass die Schultern bewusst fallen — oft merken wir erst dann, wie hochgezogen sie waren. Neige den Kopf langsam zur rechten Seite, Ohr Richtung Schulter, ohne die Schulter hochzuziehen. Atme 5 tiefe Atemzüge in diese Dehnung hinein. Dann zur anderen Seite. Danach: Drehe den Kopf langsam nach rechts, halte 5 Atemzüge, zurück zur Mitte, nach links. Zum Abschluss kreise die Schultern 5 Mal langsam nach hinten und unten — als wolltest du sie in die Hosentaschen stecken. Mach diese Übung täglich, am besten abends.'
+      }
+    ]
   };
   if (score >= 35) return {
     name: 'Wenig reguliert',
     klasse: 'cat-wenig',
     icon: '🍂',
     titel: 'Dein Nervensystem braucht deine Aufmerksamkeit',
-    text: 'Dein Nervensystem ist dauerhaft unter Strom oder hat sich in einen Erschöpfungsmodus zurückgezogen. Beides ist eine Schutzreaktion — aber auf Dauer zehrt es an Körper und Seele. Du verdienst mehr als Funktionieren. Dein System hat die Fähigkeit zur Regulation — es braucht Unterstützung um sich daran zu erinnern.',
-    tips: ['Langsame, verlängerte Ausatmung (4 sec ein, 8 sec aus) aktiviert den Parasympathikus', 'Suche bewusst nach Momenten der Sicherheit — Menschen, Orte, Rituale die sich gut anfühlen', 'Sanfte Körperarbeit wie Osteopathie oder Craniosacral-Therapie kann das System entsichern', 'Kleine konsistente Schritte schlagen große sporadische Veränderungen']
+    text: 'Dein Nervensystem ist gerade dauerhaft unter Strom oder hat sich in einen Erschöpfungsmodus zurückgezogen. Beides sind Schutzreaktionen — aber auf Dauer zehren sie an Körper und Seele. Du verdienst mehr als nur Funktionieren. Dein System hat die Fähigkeit zur Regulation, das ist biologisch angelegt. Es braucht gerade Unterstützung, um sich daran zu erinnern.',
+    tips: [
+      'Verlängere bewusst deine Ausatmung — sie ist der direkteste Weg zum Parasympathikus und kostet nichts',
+      'Suche täglich nach mindestens einem Moment der Sicherheit — ein Mensch, ein Ort, ein Ritual, das sich gut anfühlt',
+      'Sanfte Körperarbeit wie Osteopathie oder Craniosacral-Therapie kann dein System von außen entsichern, wenn du es von innen nicht erreichst',
+      'Kleine, tägliche Schritte wirken nachhaltiger als große Veränderungen, die du nicht durchhältst',
+      'Führe kurz Buch über Momente, in denen es dir besser ging — das zeigt deinem Gehirn, dass Regulation möglich ist'
+    ],
+    uebungen: [
+      {
+        titel: 'Der physiologische Seufzer — die schnellste Methode der Wissenschaft',
+        beschreibung: 'Forscher der Stanford University haben gezeigt, dass diese Atemtechnik Stress schneller senkt als jede andere Methode — und sie dauert nur 5 Sekunden. Atme einmal tief durch die Nase ein. Dann, bevor du ausatmest, schnappst du noch einen kurzen zweiten Einatemzug obendrauf — als ob du die Lunge ein letztes Stück weiter füllst. Dann langsam und vollständig durch den Mund ausatmen, so lang wie es geht. Dieser doppelte Einatemzug öffnet kollabierte Lungenbläschen und aktiviert sofort den Parasympathikus. Einmal reicht schon für eine spürbare Wirkung. Mach ihn wann immer du merkst, dass du angespannt bist — im Auto, im Wartezimmer, vor einem schwierigen Gespräch.'
+      },
+      {
+        titel: 'Kieferentspannung — Stress aus dem Körpergedächtnis lösen',
+        beschreibung: 'Der Kiefer ist einer der größten Stresspuffer des Körpers — er spannt sich an, wenn wir Dinge „schlucken" die wir eigentlich sagen wollen. Beginne damit, den Mund so weit wie möglich zu öffnen — gähne bewusst, auch wenn du nicht müde bist. Massiere dann mit den Fingerkuppen sanft die Kiefergelenke direkt vor deinen Ohren in kleinen, langsamen Kreisen für etwa eine Minute. Lass dann den Unterkiefer locker fallen: Lippen leicht geöffnet, Zähne haben keinen Kontakt, die Zunge liegt entspannt am Mundboden. Bleibe so für 2–3 Minuten und atme dabei tief. Viele Menschen spüren, wie sich die Entspannung vom Kiefer in den Nacken, die Schultern und sogar in den Bauch ausbreitet.'
+      }
+    ]
   };
   return {
     name: 'Stark dysreguliert',
     klasse: 'cat-dysreguliert',
     icon: '🌑',
     titel: 'Dein Nervensystem ist im Überlebensmodus',
-    text: 'Dein Nervensystem kämpft gerade hart um dich zu schützen. Ob als dauerhafte Alarmbereitschaft oder als Erstarrung und Taubheit — beides sind Zeichen, dass dein System überlastet ist und Unterstützung braucht. Das ist keine Schwäche, sondern ein lauter Ruf deines Körpers. Du musst nicht alleine durch diese Phase.',
-    tips: ['Fange klein an — ein einziger tiefer Atemzug am Tag zählt', 'Körperkontakt (Umarmungen, warmes Bad, Eigenberührung) sendet Sicherheitssignale ans Nervensystem', 'Professionelle Begleitung durch Osteopathie und Therapie ist hier besonders wertvoll', 'Bitte Menschen die dir guttun um Nähe — Ko-Regulation ist heilsam']
+    text: 'Dein Nervensystem kämpft gerade hart darum, dich zu schützen. Ob als dauerhafte Alarmbereitschaft oder als Erstarrung und innere Taubheit — beides sind Zeichen, dass dein System an seine Grenzen gekommen ist. Das ist keine Schwäche. Das ist ein lauter Ruf deines Körpers, der gehört werden möchte. Du musst nicht alleine durch diese Phase.',
+    tips: [
+      'Fange so klein an wie nötig — ein einziger bewusster Atemzug am Tag ist ein echter Anfang',
+      'Körperkontakt sendet Sicherheitssignale direkt ans Nervensystem — Umarmungen, ein warmes Bad, die eigene Hand auf die Brust legen',
+      'Professionelle Begleitung durch Osteopathie, Körpertherapie oder psychologische Unterstützung ist hier kein Luxus, sondern Notwendigkeit',
+      'Bitte Menschen, denen du vertraust, um Nähe — Ko-Regulation mit einem sicheren Menschen ist eine der heilsamsten Erfahrungen die es gibt',
+      'Sei sanft mit dir — dein Nervensystem tut gerade das Beste, was es kann. Es braucht Verständnis, keinen Druck'
+    ],
+    uebungen: [
+      {
+        titel: 'Schmetterlingsumarmung — bilaterale Selbstregulation',
+        beschreibung: 'Diese Technik stammt aus der Traumatherapie und hilft dem Nervensystem, aus dem Schockzustand herauszufinden — durch sanfte, abwechselnde Stimulation beider Körperhälften. Kreuze deine Arme vor der Brust: rechte Hand auf die linke Schulter, linke Hand auf die rechte Schulter. Beginne nun abwechselnd sanft zu klopfen — rechts, links, rechts, links — in einem langsamen, ruhigen Rhythmus, wie ein ruhiger Herzschlag. Schließe die Augen wenn es sich sicher anfühlt. Denke an etwas Neutrales oder an einen Moment, in dem du dich sicher gefühlt hast. Atme dabei ruhig. Mach das für 2–3 Minuten. Viele Menschen spüren danach eine Schwere in den Gliedern — das ist ein gutes Zeichen. Das Nervensystem lässt los.'
+      },
+      {
+        titel: 'Dein sicherer innerer Ort',
+        beschreibung: 'Setze oder lege dich an einem ruhigen Platz bequem hin. Schließe die Augen. Stelle dir einen Ort vor — real oder vorgestellt — an dem du dich vollkommen sicher und wohl fühlst. Das kann ein Ort in der Natur sein, ein Zimmer, eine Erinnerung aus der Kindheit, oder ein Ort den es noch gar nicht gibt. Lass ihn entstehen ohne ihn zu erzwingen. Gehe dann mit all deinen Sinnen in diesen Ort hinein: Was siehst du? Was hörst du — vielleicht Wind, Wasser, Stille? Wie riecht es? Wie fühlt sich der Boden oder die Oberfläche unter dir an? Ist es warm oder kühl? Bleibe dort so lange wie du möchtest. Atme ruhig. Dieser Ort gehört nur dir — niemand kann dort eindringen. Du kannst jederzeit dorthin zurückkehren, in jedem Moment des Tages, einfach indem du die Augen schließt.'
+      }
+    ]
   };
 }
 
@@ -575,6 +670,16 @@ function zeigeErgebnis(score, name) {
       <ul>
         ${k.tips.map(t => `<li>${t}</li>`).join('')}
       </ul>
+    </div>
+
+    <div class="result-uebungen">
+      <h3>Zwei Übungen speziell für dich:</h3>
+      ${k.uebungen.map(u => `
+        <div class="uebung">
+          <h4>${u.titel}</h4>
+          <p>${u.beschreibung}</p>
+        </div>
+      `).join('')}
     </div>
 
     <p class="email-note">📬 Du bekommst gleich eine E-Mail mit noch mehr Tipps speziell für dein Nervensystem.</p>
