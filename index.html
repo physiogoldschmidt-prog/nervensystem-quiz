@@ -9,722 +9,371 @@
 
     body {
       font-family: 'Georgia', serif;
-      background: #f7f4ef;
+      background-color: #f7f4ef;
+      background-image:
+        radial-gradient(circle, rgba(201,168,76,0.3) 1.5px, transparent 1.5px),
+        radial-gradient(circle, rgba(201,168,76,0.15) 3px, transparent 3px),
+        radial-gradient(circle, rgba(201,168,76,0.2) 1px, transparent 1px),
+        radial-gradient(circle, rgba(201,168,76,0.1) 4px, transparent 4px);
+      background-size: 60px 80px, 110px 130px, 45px 70px, 160px 190px;
+      background-position: 0 0, 30px 50px, 15px 35px, 80px 100px;
       color: #3a3a3a;
       min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
+      padding: 40px 20px 80px;
     }
 
     .container {
-      background: #fff;
-      border-radius: 20px;
       max-width: 680px;
-      width: 100%;
-      padding: 48px 40px;
-      box-shadow: 0 4px 40px rgba(0,0,0,0.08);
-    }
-
-    .logo {
-      text-align: center;
-      font-size: 13px;
-      color: #8a7e6e;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 32px;
-    }
-
-    h1 {
-      font-size: 28px;
-      color: #2d4a3e;
-      line-height: 1.3;
-      text-align: center;
-      margin-bottom: 12px;
-    }
-
-    .subtitle {
-      text-align: center;
-      color: #7a7060;
-      font-size: 16px;
-      line-height: 1.6;
-      margin-bottom: 36px;
-    }
-
-    /* Fortschrittsbalken */
-    .progress-wrap {
-      background: #eee;
-      border-radius: 99px;
-      height: 6px;
-      margin-bottom: 8px;
-    }
-    .progress-bar {
-      background: #5a8a72;
-      height: 6px;
-      border-radius: 99px;
-      transition: width 0.4s ease;
-      width: 0%;
-    }
-    .progress-label {
-      font-size: 13px;
-      color: #9a9080;
-      margin-bottom: 32px;
-      text-align: right;
-    }
-
-    /* Frage */
-    .question-block { display: none; }
-    .question-block.active { display: block; }
-
-    .question-number {
-      font-size: 12px;
-      color: #5a8a72;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-
-    .question-text {
-      font-size: 20px;
-      color: #2d4a3e;
-      line-height: 1.5;
-      margin-bottom: 28px;
-    }
-
-    .options {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .option {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 14px 18px;
-      border: 2px solid #e8e2d8;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: all 0.2s;
-      font-size: 15px;
-      color: #4a4a4a;
-      background: #faf8f5;
-    }
-
-    .option:hover { border-color: #5a8a72; background: #f0f7f3; }
-    .option.selected { border-color: #5a8a72; background: #e8f4ee; color: #2d4a3e; font-weight: bold; }
-
-    .option-dot {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      border: 2px solid #c5bdb0;
-      flex-shrink: 0;
-      transition: all 0.2s;
-    }
-    .option.selected .option-dot {
-      background: #5a8a72;
-      border-color: #5a8a72;
-    }
-
-    /* Navigation */
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 32px;
-    }
-
-    .btn {
-      padding: 14px 32px;
-      border-radius: 50px;
-      font-size: 15px;
-      cursor: pointer;
-      border: none;
-      transition: all 0.2s;
-      font-family: inherit;
-    }
-
-    .btn-primary {
-      background: #5a8a72;
-      color: #fff;
-    }
-    .btn-primary:hover { background: #4a7560; }
-    .btn-primary:disabled { background: #c5d8ce; cursor: not-allowed; }
-
-    .btn-back {
-      background: transparent;
-      color: #9a9080;
-      padding: 14px 0;
-    }
-    .btn-back:hover { color: #3a3a3a; }
-
-    /* E-Mail Gate */
-    #email-gate {
-      display: none;
-      text-align: center;
-    }
-
-    #email-gate h2 {
-      font-size: 24px;
-      color: #2d4a3e;
-      margin-bottom: 12px;
-    }
-
-    #email-gate p {
-      color: #7a7060;
-      font-size: 15px;
-      line-height: 1.6;
-      margin-bottom: 28px;
-    }
-
-    .email-input-wrap {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      max-width: 400px;
       margin: 0 auto;
     }
 
-    .email-input-wrap input {
-      padding: 16px 20px;
-      border: 2px solid #e8e2d8;
-      border-radius: 12px;
-      font-size: 16px;
-      font-family: inherit;
-      outline: none;
-      transition: border 0.2s;
-    }
-    .email-input-wrap input:focus { border-color: #5a8a72; }
-
-    .email-input-wrap input[type="text"] {}
-
-    .privacy-note {
-      font-size: 12px;
-      color: #b0a898;
-      margin-top: 8px;
+    /* Header */
+    .logo {
+      text-align: center;
+      margin-bottom: 12px;
     }
 
-    .error-msg {
-      color: #c0392b;
+    .logo img {
+      width: 150px;
+      height: 150px;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+    }
+
+    .logo-name {
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: #2d4a3e;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+
+    .logo-title {
+      text-align: center;
       font-size: 14px;
-      display: none;
-    }
-
-    /* Ergebnis */
-    #result { display: none; text-align: center; }
-
-    .result-icon {
-      font-size: 64px;
-      margin-bottom: 16px;
-    }
-
-    .result-category {
-      display: inline-block;
-      padding: 6px 20px;
-      border-radius: 99px;
-      font-size: 13px;
+      color: #8a7e6e;
       letter-spacing: 2px;
       text-transform: uppercase;
       margin-bottom: 16px;
-      font-weight: bold;
     }
 
-    .result-title {
-      font-size: 26px;
-      color: #2d4a3e;
-      margin-bottom: 16px;
-      line-height: 1.3;
+    .contact-bar {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 14px;
+      color: #8a7e6e;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
     }
 
-    .result-text {
-      font-size: 15px;
-      color: #7a7060;
-      line-height: 1.8;
-      margin-bottom: 28px;
+    .contact-bar a {
+      color: #5a8a72;
+      text-decoration: none;
     }
 
-    .result-score-bar-wrap {
-      background: #eee;
-      border-radius: 99px;
-      height: 10px;
-      max-width: 400px;
-      margin: 0 auto 8px;
+    .contact-bar a:hover {
+      text-decoration: underline;
     }
-    .result-score-bar {
-      height: 10px;
-      border-radius: 99px;
-      transition: width 1s ease;
-      width: 0%;
-    }
-    .result-score-label {
-      font-size: 13px;
-      color: #9a9080;
+
+    /* Hero */
+    .hero {
+      background: #fff;
+      border-radius: 20px;
+      padding: 48px 40px;
+      box-shadow: 0 4px 40px rgba(0,0,0,0.07);
+      text-align: center;
       margin-bottom: 32px;
     }
 
-    .result-tips {
-      background: #f0f7f3;
-      border-radius: 16px;
-      padding: 24px;
-      text-align: left;
-      margin-bottom: 28px;
+    .gold-line {
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #C9A84C, transparent);
+      margin: 0 auto 20px;
     }
-    .result-tips h3 {
-      font-size: 16px;
+
+    .tag {
+      display: inline-block;
+      background: linear-gradient(135deg, #f5e6c0, #fdf3dc);
+      color: #9a7830;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border-radius: 99px;
+      margin-bottom: 24px;
+      border: 1px solid #C9A84C44;
+    }
+
+    h1 {
+      font-size: 30px;
       color: #2d4a3e;
-      margin-bottom: 14px;
-    }
-    .result-tips ul {
-      padding-left: 20px;
-      color: #5a5a5a;
-      font-size: 15px;
-      line-height: 2;
+      line-height: 1.35;
+      margin-bottom: 20px;
     }
 
-    .result-uebungen {
-      text-align: left;
-      margin-bottom: 28px;
+    .hero-text {
+      font-size: 17px;
+      color: #6a6055;
+      line-height: 1.75;
+      margin-bottom: 36px;
     }
 
-    .result-uebungen h3 {
-      font-size: 16px;
-      color: #2d4a3e;
-      margin-bottom: 16px;
+    .cta-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #C9A84C, #e8c96a, #C9A84C);
+      color: #fff;
+      font-family: 'Georgia', serif;
+      font-size: 17px;
+      padding: 16px 40px;
+      border-radius: 99px;
+      text-decoration: none;
+      transition: opacity 0.2s ease, transform 0.1s ease;
+      box-shadow: 0 4px 20px rgba(201,168,76,0.35);
+      letter-spacing: 0.5px;
     }
 
-    .uebung {
-      background: #f7f4ef;
-      border-left: 3px solid #5a8a72;
-      border-radius: 0 12px 12px 0;
-      padding: 20px;
-      margin-bottom: 14px;
+    .cta-btn:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
     }
 
-    .uebung h4 {
-      font-size: 15px;
-      color: #2d4a3e;
-      margin-bottom: 10px;
+    .cta-note {
+      margin-top: 14px;
+      font-size: 13px;
+      color: #9a9080;
     }
 
-    .uebung p {
-      font-size: 14px;
-      color: #5a5045;
-      line-height: 1.8;
-    }
-
-    .email-note {
-      font-size: 14px;
-      color: #8a7e6e;
-      font-style: italic;
+    /* Problem-Block */
+    .section {
+      background: #fff;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 4px 40px rgba(0,0,0,0.07);
       margin-bottom: 24px;
     }
 
-    .btn-cta {
-      background: #2d4a3e;
-      color: #fff;
-      font-size: 16px;
-      padding: 16px 40px;
-      border-radius: 50px;
-      display: inline-block;
-      text-decoration: none;
-      font-family: inherit;
-      cursor: pointer;
-      border: none;
-      transition: background 0.2s;
-    }
-    .btn-cta:hover { background: #1e3329; }
-
-    .btn-cta-outline {
-      background: transparent;
+    .section h2 {
+      font-size: 22px;
       color: #2d4a3e;
-      font-size: 16px;
-      padding: 15px 40px;
-      border-radius: 50px;
-      display: inline-block;
-      text-decoration: none;
-      font-family: inherit;
-      cursor: pointer;
-      border: 2px solid #2d4a3e;
-      transition: background 0.2s, color 0.2s;
+      margin-bottom: 20px;
+      line-height: 1.4;
     }
-    .btn-cta-outline:hover { background: #2d4a3e; color: #fff; }
 
-    .cta-group {
+    .check-list {
+      list-style: none;
       display: flex;
       flex-direction: column;
-      align-items: center;
       gap: 12px;
-      margin-bottom: 8px;
     }
 
-    .cta-divider {
-      font-size: 13px;
-      color: #b0a898;
+    .check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 16px;
+      color: #5a5045;
+      line-height: 1.55;
     }
 
-    /* Kategoriefarben */
-    .cat-gut { background: #d4edda; color: #1e6b3a; }
-    .cat-gut .result-score-bar { background: #4CAF50; }
-    .cat-maessig { background: #fff3cd; color: #856404; }
-    .cat-maessig .result-score-bar { background: #ffc107; }
-    .cat-wenig { background: #ffe0cc; color: #b84a00; }
-    .cat-wenig .result-score-bar { background: #ff7f3f; }
-    .cat-dysreguliert { background: #f8d7da; color: #842029; }
-    .cat-dysreguliert .result-score-bar { background: #dc3545; }
-
-    .loading {
-      display: none;
+    .check-list li::before {
+      content: "•";
       color: #5a8a72;
-      font-size: 15px;
-      margin-top: 12px;
+      font-size: 20px;
+      line-height: 1.2;
+      flex-shrink: 0;
     }
 
-    @media (max-width: 480px) {
-      .container { padding: 32px 24px; }
-      h1 { font-size: 22px; }
-      .question-text { font-size: 17px; }
+    /* Über Lisa */
+    .about {
+      background: #2d4a3e;
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 24px;
+      color: #e8f0eb;
+    }
+
+    .about h2 {
+      font-size: 22px;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .about p {
+      font-size: 16px;
+      line-height: 1.75;
+      color: #c8dbd0;
+      margin-bottom: 14px;
+    }
+
+    .about p:last-child {
+      margin-bottom: 0;
+    }
+
+    .about .highlight {
+      color: #fff;
+      font-style: italic;
+    }
+
+    /* Was das Quiz bringt */
+    .quiz-info h2 {
+      font-size: 22px;
+      color: #2d4a3e;
+      margin-bottom: 20px;
+    }
+
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .step-number {
+      background: linear-gradient(135deg, #C9A84C, #e8c96a);
+      color: #fff;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(201,168,76,0.3);
+    }
+
+    .step-text {
+      font-size: 16px;
+      color: #5a5045;
+      line-height: 1.55;
+      padding-top: 4px;
+    }
+
+    /* Bottom CTA */
+    .bottom-cta {
+      background: #fff;
+      border-radius: 20px;
+      padding: 48px 40px;
+      box-shadow: 0 4px 40px rgba(0,0,0,0.07);
+      text-align: center;
+      margin-top: 8px;
+    }
+
+    .bottom-cta h2 {
+      font-size: 24px;
+      color: #2d4a3e;
+      margin-bottom: 16px;
+      line-height: 1.4;
+    }
+
+    .bottom-cta p {
+      font-size: 16px;
+      color: #7a7060;
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+
+    /* Responsive */
+    @media (max-width: 520px) {
+      .hero, .section, .about, .bottom-cta { padding: 32px 24px; }
+      h1 { font-size: 24px; }
+      .about h2, .section h2, .bottom-cta h2, .quiz-info h2 { font-size: 20px; }
     }
   </style>
 </head>
 <body>
-<div class="container">
+  <div class="container">
 
-  <div class="logo">Lisa Goldschmidt · Osteopathie und Stressmanagement</div>
-
-  <!-- Quiz -->
-  <div id="quiz">
-    <h1>Wie reguliert ist dein Nervensystem?</h1>
-    <p class="subtitle">21 Fragen · 3 Minuten · ehrliches Ergebnis</p>
-
-    <div class="progress-wrap">
-      <div class="progress-bar" id="progress-bar"></div>
+    <div class="logo">
+      <img src="logo.png" alt="BePatient – stressfrei-er-leben" />
     </div>
-    <div class="progress-label" id="progress-label">Frage 1 von 20</div>
-
-    <div id="questions"></div>
-
-    <div class="nav">
-      <button class="btn btn-back" id="btn-back" onclick="prevQuestion()" style="display:none">← Zurück</button>
-      <button class="btn btn-primary" id="btn-next" onclick="nextQuestion()" disabled>Weiter →</button>
+    <div class="logo-name">Lisa Goldschmidt</div>
+    <div class="gold-line"></div>
+    <div class="logo-title">Heilpraktikerin · Osteopathie · Stressmanagement</div>
+    <div class="contact-bar">
+      <a href="tel:015901974975">0159 01974975</a>
+      <a href="mailto:lisa.goldschmidt@stressfrei-er-leben.de">lisa.goldschmidt@stressfrei-er-leben.de</a>
+      <a href="https://www.stressfrei-er-leben.de" target="_blank">stressfrei-er-leben.de</a>
     </div>
-  </div>
 
-  <!-- E-Mail Gate -->
-  <div id="email-gate">
-    <h2>Fast geschafft! ✨</h2>
-    <p>Trag deine E-Mail-Adresse ein um dein persönliches Ergebnis zu sehen — und erhalte direkt passende Tipps für dein Nervensystem.</p>
-    <div class="email-input-wrap">
-      <input type="text" id="input-name" placeholder="Dein Vorname" />
-      <input type="email" id="input-email" placeholder="Deine E-Mail-Adresse" />
-      <div class="error-msg" id="error-msg">Bitte gib eine gültige E-Mail-Adresse ein.</div>
-      <button class="btn btn-primary" onclick="submitEmail()">Mein Ergebnis anzeigen →</button>
-      <div class="loading" id="loading">Wird gespeichert…</div>
-      <p class="privacy-note">Kein Spam. Du kannst dich jederzeit abmelden. Datenschutz wird respektiert.</p>
+    <!-- Hero -->
+    <div class="hero">
+      <div class="tag">Kostenloser Selbsttest</div>
+      <h1>Wie reguliert ist dein Nervensystem wirklich?</h1>
+      <p class="hero-text">
+        Dein Körper sendet Signale — manchmal laut, manchmal leise.
+        Dieser Test hilft dir zu verstehen, was dahintersteckt.
+        In 3 Minuten. Ehrlich. Ohne Fachchinesisch.
+      </p>
+      <a href="quiz.html" class="cta-btn">Jetzt Quiz starten →</a>
+      <p class="cta-note">21 Fragen · 3 Minuten · kostenlos</p>
     </div>
-  </div>
 
-  <!-- Ergebnis -->
-  <div id="result"></div>
-
-</div>
-
-<script>
-const SUBSCRIBE_URL = '/.netlify/functions/subscribe';
-
-const fragen = [
-  { text: "Wie oft wachst du morgens ausgeruht auf?", skala: ["Fast nie", "Selten", "Manchmal", "Oft", "Fast immer"] },
-  { text: "Wie gut kannst du dich nach einem stressigen Tag erholen?", skala: ["Gar nicht", "Kaum", "Manchmal", "Gut", "Sehr gut"] },
-  { text: "Wie häufig spürst du Anspannung oder Verspannungen im Körper (Nacken, Kiefer, Schultern)?", skala: ["Ständig", "Oft", "Manchmal", "Selten", "Fast nie"], invert: true },
-  { text: "Wie ruhig ist dein Atem im Alltag?", skala: ["Sehr flach & unruhig", "Eher flach", "Mittel", "Meist ruhig", "Tief & gleichmäßig"] },
-  { text: "Wie leicht kannst du abschalten und zur Ruhe kommen?", skala: ["Gar nicht", "Schwer", "Manchmal", "Meistens", "Sehr leicht"] },
-  { text: "Wie häufig reagierst du schnell gereizt oder überreagierst auf kleine Dinge?", skala: ["Sehr oft", "Oft", "Manchmal", "Selten", "Fast nie"], invert: true },
-  { text: "Wie gut kannst du Grenzen setzen ohne schlechtes Gewissen?", skala: ["Gar nicht", "Schwer", "Manchmal", "Gut", "Sehr gut"] },
-  { text: "Wie oft fühlst du dich innerlich leer, taub oder abgeschnitten?", skala: ["Sehr oft", "Oft", "Manchmal", "Selten", "Fast nie"], invert: true },
-  { text: "Wie stabil ist deine Stimmung über den Tag hinweg?", skala: ["Sehr schwankend", "Oft schwankend", "Mittel", "Meist stabil", "Sehr stabil"] },
-  { text: "Wie gut kannst du im gegenwärtigen Moment ankommen (ohne ständig zu grübeln)?", skala: ["Kaum", "Schwer", "Manchmal", "Oft", "Sehr gut"] },
-  { text: "Wie häufig hast du Verdauungsprobleme (Bauchschmerzen, Blähungen, Durchfall, Verstopfung)?", skala: ["Sehr oft", "Oft", "Manchmal", "Selten", "Fast nie"], invert: true },
-  { text: "Wie oft hast du körperliche Symptome, für die der Arzt keine Erklärung findet?", skala: ["Sehr oft", "Oft", "Manchmal", "Selten", "Fast nie"], invert: true },
-  { text: "Wie sicher und geborgen fühlst du dich in deinem Körper?", skala: ["Gar nicht", "Kaum", "Manchmal", "Oft", "Sehr sicher"] },
-  { text: "Wie leicht fällt es dir, echte Verbindung zu anderen Menschen herzustellen?", skala: ["Sehr schwer", "Schwer", "Manchmal", "Oft", "Sehr leicht"] },
-  { text: "Wie oft bist du in einem Zustand von Alarmbereitschaft — als ob gleich etwas Schlimmes passiert?", skala: ["Ständig", "Oft", "Manchmal", "Selten", "Fast nie"], invert: true },
-  { text: "Wie gut kannst du Gefühle wahrnehmen und benennen ohne überwältigt zu werden?", skala: ["Gar nicht", "Kaum", "Manchmal", "Gut", "Sehr gut"] },
-  { text: "Wie häufig hast du das Gefühl, einfach funktionieren zu müssen ohne wirklich zu leben?", skala: ["Sehr oft", "Oft", "Manchmal", "Selten", "Fast nie"], invert: true },
-  { text: "Wie schnell beruhigst du dich nach einem Schrecken oder Streit?", skala: ["Sehr langsam (Stunden/Tage)", "Langsam", "Mittel", "Schnell", "Sehr schnell"] },
-  { text: "Wie oft hast du das Gefühl von echter Freude oder Leichtigkeit?", skala: ["Fast nie", "Selten", "Manchmal", "Oft", "Täglich"] },
-  { text: "Wie gut nimmt dein Körper Berührung (Umarmung, Massage) als angenehm wahr?", skala: ["Kaum / unangenehm", "Eher nicht", "Manchmal", "Meistens", "Sehr gut"] },
-  { text: "Wie sehr vertraust du darauf, dass dein Körper weiß was er braucht?", skala: ["Gar nicht", "Kaum", "Manchmal", "Oft", "Vollständig"] },
-];
-
-let antworten = new Array(fragen.length).fill(null);
-let aktuelleFrageIndex = 0;
-
-function init() {
-  const container = document.getElementById('questions');
-  fragen.forEach((frage, i) => {
-    const div = document.createElement('div');
-    div.className = 'question-block' + (i === 0 ? ' active' : '');
-    div.id = 'frage-' + i;
-
-    const punkte = frage.invert
-      ? [5, 4, 3, 2, 1]
-      : [1, 2, 3, 4, 5];
-
-    div.innerHTML = `
-      <div class="question-number">Frage ${i + 1} von ${fragen.length}</div>
-      <div class="question-text">${frage.text}</div>
-      <div class="options">
-        ${frage.skala.map((label, j) => `
-          <div class="option" onclick="waehleAntwort(${i}, ${punkte[j]}, this)">
-            <div class="option-dot"></div>
-            <span>${label}</span>
-          </div>
-        `).join('')}
-      </div>
-    `;
-    container.appendChild(div);
-  });
-  updateUI();
-}
-
-function waehleAntwort(frageIdx, punkte, el) {
-  antworten[frageIdx] = punkte;
-  document.querySelectorAll(`#frage-${frageIdx} .option`).forEach(o => o.classList.remove('selected'));
-  el.classList.add('selected');
-  document.getElementById('btn-next').disabled = false;
-}
-
-function nextQuestion() {
-  if (antworten[aktuelleFrageIndex] === null) return;
-  if (aktuelleFrageIndex < fragen.length - 1) {
-    document.getElementById('frage-' + aktuelleFrageIndex).classList.remove('active');
-    aktuelleFrageIndex++;
-    document.getElementById('frage-' + aktuelleFrageIndex).classList.add('active');
-    updateUI();
-  } else {
-    zeigeEmailGate();
-  }
-}
-
-function prevQuestion() {
-  if (aktuelleFrageIndex > 0) {
-    document.getElementById('frage-' + aktuelleFrageIndex).classList.remove('active');
-    aktuelleFrageIndex--;
-    document.getElementById('frage-' + aktuelleFrageIndex).classList.add('active');
-    updateUI();
-  }
-}
-
-function updateUI() {
-  const total = fragen.length;
-  const current = aktuelleFrageIndex + 1;
-  const pct = Math.round(((current - 1) / total) * 100);
-  document.getElementById('progress-bar').style.width = pct + '%';
-  document.getElementById('progress-label').textContent = `Frage ${current} von ${total}`;
-  document.getElementById('btn-back').style.display = aktuelleFrageIndex > 0 ? 'block' : 'none';
-  document.getElementById('btn-next').disabled = antworten[aktuelleFrageIndex] === null;
-  const isLast = aktuelleFrageIndex === fragen.length - 1;
-  document.getElementById('btn-next').textContent = isLast ? 'Ergebnis anzeigen →' : 'Weiter →';
-}
-
-function berechneScore() {
-  const sum = antworten.reduce((a, b) => a + b, 0);
-  const max = fragen.length * 5;
-  return Math.round((sum / max) * 100);
-}
-
-function zeigeEmailGate() {
-  document.getElementById('quiz').style.display = 'none';
-  document.getElementById('email-gate').style.display = 'block';
-}
-
-async function submitEmail() {
-  const name = document.getElementById('input-name').value.trim();
-  const email = document.getElementById('input-email').value.trim();
-  const errorEl = document.getElementById('error-msg');
-  const loadingEl = document.getElementById('loading');
-
-  if (!email || !email.includes('@')) {
-    errorEl.style.display = 'block';
-    return;
-  }
-  errorEl.style.display = 'none';
-
-  const score = berechneScore();
-  const kategorie = getKategorie(score);
-
-  loadingEl.style.display = 'block';
-
-  try {
-    await fetch(SUBSCRIBE_URL, {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({
-        email,
-        name: name || '',
-        score,
-        kategorie: kategorie.name
-      })
-    });
-  } catch (e) {
-    // Trotzdem Ergebnis zeigen
-  }
-
-  loadingEl.style.display = 'none';
-  zeigeErgebnis(score, name);
-}
-
-function getKategorie(score) {
-  if (score >= 75) return {
-    name: 'Gut reguliert',
-    klasse: 'cat-gut',
-    icon: '🌿',
-    titel: 'Dein Nervensystem ist gut reguliert',
-    text: 'Du hast eine starke innere Basis. Dein Nervensystem kann gut zwischen Anspannung und Entspannung wechseln — das ist eine wertvolle Ressource. Du regenerierst dich nach Stress gut und hast Zugang zu echtem Wohlbefinden. Deine Aufgabe jetzt ist es, diese Balance nicht als selbstverständlich zu nehmen, sondern sie bewusst zu pflegen und noch tiefer zu verankern.',
-    tips: [
-      'Baue täglich kleine Achtsamkeitsmomente ein — schon 2 Minuten bewusstes Atmen verändern die Qualität deines Nervensystems',
-      'Bewegung wie Yoga, Schwimmen oder Tanzen stärkt den Vagusnerv weiter und vertieft deine Regulationsfähigkeit',
-      'Schütze deine Erholungszeiten aktiv — auch wenn alles gut läuft, braucht das Nervensystem echte Pausen',
-      'Teile deine Ruhe mit Menschen um dich herum — Ko-Regulation ist eines der wirksamsten Werkzeuge die wir haben',
-      'Bleibe neugierig auf deinen Körper — er zeigt dir immer als Erstes, wenn sich etwas verschiebt'
-    ],
-    uebungen: [
-      {
-        titel: 'Vagusnerv-Aktivierung durch Summen',
-        beschreibung: 'Das Summen aktiviert den Vagusnerv direkt über die Vibrationen im Kehlkopf — sanft, wirksam und überall möglich. Setze dich bequem hin und schließe die Augen. Atme tief durch die Nase ein. Beim Ausatmen summst du einen langen, gleichmäßigen Ton — wie ein leises „Mmmmm". Spüre die Vibration in deiner Brust, deinem Hals und deinem Schädel. Lass den Ton so lange klingen wie dein Atem reicht. Wiederhole das 6–8 Mal. Du kannst verschiedene Tonhöhen ausprobieren und beobachten, wo die Vibration am tiefsten zu spüren ist. Viele Menschen bemerken danach eine deutliche Weite im Brustkorb und eine Stille im Kopf.'
-      },
-      {
-        titel: 'Body-Scan zur Vertiefung der Körperwahrnehmung',
-        beschreibung: 'Lege dich auf den Rücken oder sitze aufrecht mit geschlossenen Augen. Beginne an deinen Fußsohlen und wandere langsam mit deiner Aufmerksamkeit nach oben — Zehen, Fußrücken, Knöchel, Waden, Knie. Nicht bewerten, nur wahrnehmen. Was spürst du? Wärme oder Kühle? Druck oder Leichte? Kribbeln oder Taubheit? Nimm dir für jeden Bereich ein paar Atemzüge Zeit. Wenn Gedanken kommen, lass sie wie Wolken weiterziehen und kehre sanft zur Körperstelle zurück. Der gesamte Scan dauert 10–15 Minuten. Je regelmäßiger du ihn machst, desto feiner wird deine Wahrnehmung für das, was dein Körper dir sagt.'
-      }
-    ]
-  };
-  if (score >= 55) return {
-    name: 'Mäßig reguliert',
-    klasse: 'cat-maessig',
-    icon: '🌾',
-    titel: 'Dein Nervensystem zeigt erste Zeichen von Überlastung',
-    text: 'Du funktionierst — aber manchmal spürst du, dass etwas nicht ganz stimmt. Dein Nervensystem befindet sich teilweise in einem chronischen Aktivierungszustand, aus dem es sich nicht mehr vollständig erholen kann. Das kostet Energie, ohne dass du es direkt merkst. Die gute Nachricht: Dein System ist noch nah an der Balance. Mit gezielten, regelmäßigen Impulsen kannst du es wieder dorthin zurückführen.',
-    tips: [
-      'Starte morgens mit 5 Minuten langsamem, tiefem Atmen durch die Nase — das gibt deinem Nervensystem von Beginn an die richtige Richtung',
-      'Kaltes Wasser im Gesicht oder am Hals aktiviert den Tauchreflex und kann dein System innerhalb von Sekunden beruhigen',
-      'Reduziere bewusst Reize in deinem Alltag — weniger Bildschirm, weniger Lärm, mehr Momente in der Natur',
-      'Osteopathie kann tief im Körper festgehaltene Spannungsmuster lösen, die du alleine nicht erreichst',
-      'Plane jeden Tag eine echte Pause — auch 10 Minuten Stille ohne Handy können langfristig viel verändern'
-    ],
-    uebungen: [
-      {
-        titel: '4-7-8 Atmung — der natürliche Beruhigungsschalter',
-        beschreibung: 'Diese Atemtechnik wirkt wie ein Schalter für dein parasympathisches Nervensystem. Setze dich aufrecht hin, die Hände locker auf den Oberschenkeln. Atme 4 Sekunden lang ruhig durch die Nase ein. Halte den Atem sanft für 7 Sekunden an — ohne Druck, ohne Anspannung. Atme dann 8 Sekunden lang durch den leicht geöffneten Mund aus, als würdest du durch einen Strohhalm blasen. Das Verhältnis 4-7-8 ist entscheidend: die lange Ausatmung aktiviert den Vagusnerv und signalisiert deinem Körper Sicherheit. Wiederhole die Sequenz 4 Mal. Am Anfang kann das Anhalten ungewohnt sein — bleibe sanft dabei. Schon nach wenigen Tagen wirst du merken, wie dein System schneller zur Ruhe findet.'
-      },
-      {
-        titel: 'Schulter- und Nackenentspannung',
-        beschreibung: 'Chronischer Stress sammelt sich besonders gerne in Schultern, Nacken und Kiefer. Diese Übung löst genau dort. Setze dich aufrecht hin und lass die Schultern bewusst fallen — oft merken wir erst dann, wie hochgezogen sie waren. Neige den Kopf langsam zur rechten Seite, Ohr Richtung Schulter, ohne die Schulter hochzuziehen. Atme 5 tiefe Atemzüge in diese Dehnung hinein. Dann zur anderen Seite. Danach: Drehe den Kopf langsam nach rechts, halte 5 Atemzüge, zurück zur Mitte, nach links. Zum Abschluss kreise die Schultern 5 Mal langsam nach hinten und unten — als wolltest du sie in die Hosentaschen stecken. Mach diese Übung täglich, am besten abends.'
-      }
-    ]
-  };
-  if (score >= 35) return {
-    name: 'Wenig reguliert',
-    klasse: 'cat-wenig',
-    icon: '🍂',
-    titel: 'Dein Nervensystem braucht deine Aufmerksamkeit',
-    text: 'Dein Nervensystem ist gerade dauerhaft unter Strom oder hat sich in einen Erschöpfungsmodus zurückgezogen. Beides sind Schutzreaktionen — aber auf Dauer zehren sie an Körper und Seele. Du verdienst mehr als nur Funktionieren. Dein System hat die Fähigkeit zur Regulation, das ist biologisch angelegt. Es braucht gerade Unterstützung, um sich daran zu erinnern.',
-    tips: [
-      'Verlängere bewusst deine Ausatmung — sie ist der direkteste Weg zum Parasympathikus und kostet nichts',
-      'Suche täglich nach mindestens einem Moment der Sicherheit — ein Mensch, ein Ort, ein Ritual, das sich gut anfühlt',
-      'Sanfte Körperarbeit wie Osteopathie oder Craniosacral-Therapie kann dein System von außen entsichern, wenn du es von innen nicht erreichst',
-      'Kleine, tägliche Schritte wirken nachhaltiger als große Veränderungen, die du nicht durchhältst',
-      'Führe kurz Buch über Momente, in denen es dir besser ging — das zeigt deinem Gehirn, dass Regulation möglich ist'
-    ],
-    uebungen: [
-      {
-        titel: 'Der physiologische Seufzer — die schnellste Methode der Wissenschaft',
-        beschreibung: 'Forscher der Stanford University haben gezeigt, dass diese Atemtechnik Stress schneller senkt als jede andere Methode — und sie dauert nur 5 Sekunden. Atme einmal tief durch die Nase ein. Dann, bevor du ausatmest, schnappst du noch einen kurzen zweiten Einatemzug obendrauf — als ob du die Lunge ein letztes Stück weiter füllst. Dann langsam und vollständig durch den Mund ausatmen, so lang wie es geht. Dieser doppelte Einatemzug öffnet kollabierte Lungenbläschen und aktiviert sofort den Parasympathikus. Einmal reicht schon für eine spürbare Wirkung. Mach ihn wann immer du merkst, dass du angespannt bist — im Auto, im Wartezimmer, vor einem schwierigen Gespräch.'
-      },
-      {
-        titel: 'Kieferentspannung — Stress aus dem Körpergedächtnis lösen',
-        beschreibung: 'Der Kiefer ist einer der größten Stresspuffer des Körpers — er spannt sich an, wenn wir Dinge „schlucken" die wir eigentlich sagen wollen. Beginne damit, den Mund so weit wie möglich zu öffnen — gähne bewusst, auch wenn du nicht müde bist. Massiere dann mit den Fingerkuppen sanft die Kiefergelenke direkt vor deinen Ohren in kleinen, langsamen Kreisen für etwa eine Minute. Lass dann den Unterkiefer locker fallen: Lippen leicht geöffnet, Zähne haben keinen Kontakt, die Zunge liegt entspannt am Mundboden. Bleibe so für 2–3 Minuten und atme dabei tief. Viele Menschen spüren, wie sich die Entspannung vom Kiefer in den Nacken, die Schultern und sogar in den Bauch ausbreitet.'
-      }
-    ]
-  };
-  return {
-    name: 'Stark dysreguliert',
-    klasse: 'cat-dysreguliert',
-    icon: '🌑',
-    titel: 'Dein Nervensystem ist im Überlebensmodus',
-    text: 'Dein Nervensystem kämpft gerade hart darum, dich zu schützen. Ob als dauerhafte Alarmbereitschaft oder als Erstarrung und innere Taubheit — beides sind Zeichen, dass dein System an seine Grenzen gekommen ist. Das ist keine Schwäche. Das ist ein lauter Ruf deines Körpers, der gehört werden möchte. Du musst nicht alleine durch diese Phase.',
-    tips: [
-      'Fange so klein an wie nötig — ein einziger bewusster Atemzug am Tag ist ein echter Anfang',
-      'Körperkontakt sendet Sicherheitssignale direkt ans Nervensystem — Umarmungen, ein warmes Bad, die eigene Hand auf die Brust legen',
-      'Professionelle Begleitung durch Osteopathie, Körpertherapie oder psychologische Unterstützung ist hier kein Luxus, sondern Notwendigkeit',
-      'Bitte Menschen, denen du vertraust, um Nähe — Ko-Regulation mit einem sicheren Menschen ist eine der heilsamsten Erfahrungen die es gibt',
-      'Sei sanft mit dir — dein Nervensystem tut gerade das Beste, was es kann. Es braucht Verständnis, keinen Druck'
-    ],
-    uebungen: [
-      {
-        titel: 'Schmetterlingsumarmung — bilaterale Selbstregulation',
-        beschreibung: 'Diese Technik stammt aus der Traumatherapie und hilft dem Nervensystem, aus dem Schockzustand herauszufinden — durch sanfte, abwechselnde Stimulation beider Körperhälften. Kreuze deine Arme vor der Brust: rechte Hand auf die linke Schulter, linke Hand auf die rechte Schulter. Beginne nun abwechselnd sanft zu klopfen — rechts, links, rechts, links — in einem langsamen, ruhigen Rhythmus, wie ein ruhiger Herzschlag. Schließe die Augen wenn es sich sicher anfühlt. Denke an etwas Neutrales oder an einen Moment, in dem du dich sicher gefühlt hast. Atme dabei ruhig. Mach das für 2–3 Minuten. Viele Menschen spüren danach eine Schwere in den Gliedern — das ist ein gutes Zeichen. Das Nervensystem lässt los.'
-      },
-      {
-        titel: 'Dein sicherer innerer Ort',
-        beschreibung: 'Setze oder lege dich an einem ruhigen Platz bequem hin. Schließe die Augen. Stelle dir einen Ort vor — real oder vorgestellt — an dem du dich vollkommen sicher und wohl fühlst. Das kann ein Ort in der Natur sein, ein Zimmer, eine Erinnerung aus der Kindheit, oder ein Ort den es noch gar nicht gibt. Lass ihn entstehen ohne ihn zu erzwingen. Gehe dann mit all deinen Sinnen in diesen Ort hinein: Was siehst du? Was hörst du — vielleicht Wind, Wasser, Stille? Wie riecht es? Wie fühlt sich der Boden oder die Oberfläche unter dir an? Ist es warm oder kühl? Bleibe dort so lange wie du möchtest. Atme ruhig. Dieser Ort gehört nur dir — niemand kann dort eindringen. Du kannst jederzeit dorthin zurückkehren, in jedem Moment des Tages, einfach indem du die Augen schließt.'
-      }
-    ]
-  };
-}
-
-function zeigeErgebnis(score, name) {
-  const k = getKategorie(score);
-  document.getElementById('email-gate').style.display = 'none';
-  const resultEl = document.getElementById('result');
-  resultEl.style.display = 'block';
-
-  const anrede = name ? `${name}, ` : '';
-
-  resultEl.innerHTML = `
-    <div class="result-icon">${k.icon}</div>
-    <div class="result-category ${k.klasse}">${k.name}</div>
-    <h2 class="result-title">${k.titel}</h2>
-    <p class="result-text">${k.text}</p>
-
-    <div class="result-score-bar-wrap ${k.klasse}">
-      <div class="result-score-bar" id="score-bar"></div>
-    </div>
-    <div class="result-score-label">Dein Score: ${score} von 100 Punkten</div>
-
-    <div class="result-tips">
-      <h3>Deine nächsten Schritte:</h3>
-      <ul>
-        ${k.tips.map(t => `<li>${t}</li>`).join('')}
+    <!-- Problem -->
+    <div class="section">
+      <h2>Kennst du das?</h2>
+      <ul class="check-list">
+        <li>Du bist erschöpft — aber zur Ruhe kommen fällt dir schwer.</li>
+        <li>Du hast Verspannungen, Kopfschmerzen oder Bauchprobleme, und der Arzt findet nichts.</li>
+        <li>Du funktionierst nach außen hin gut — innerlich läuft aber etwas auf Hochtouren.</li>
+        <li>Du weißt, dass Stress eine Rolle spielt, aber du weißt nicht wo du anfangen sollst.</li>
+        <li>Du hast das Gefühl, dein Körper will dir etwas sagen — du verstehst ihn nur nicht.</li>
       </ul>
     </div>
 
-    <div class="result-uebungen">
-      <h3>Zwei Übungen speziell für dich:</h3>
-      ${k.uebungen.map(u => `
-        <div class="uebung">
-          <h4>${u.titel}</h4>
-          <p>${u.beschreibung}</p>
+    <!-- Über Lisa -->
+    <div class="about">
+      <h2>Hallo, ich bin Lisa.</h2>
+      <p>
+        Ich bin Heilpraktikerin mit dem Schwerpunkt Osteopathie — und ich helfe Menschen,
+        ihre Körpersymptome zu übersetzen und sie auf ihrem Heilungsweg zu begleiten.
+      </p>
+      <p>
+        Ich kenne das Gefühl, das du vielleicht gerade spürst. Mit 27 hatte ich selbst einen Burnout.
+        Mein Körper hat lange gesprochen, bevor ich zugehört habe.
+      </p>
+      <p class="highlight">
+        Heute weiß ich: Der Körper lügt nicht. Er braucht manchmal nur jemanden,
+        der seine Sprache versteht.
+      </p>
+    </div>
+
+    <!-- Was das Quiz bringt -->
+    <div class="section quiz-info">
+      <h2>Was dich erwartet</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-text">Du beantwortest 20 kurze Fragen zu deinem Alltag, deinem Körper und deinem Erleben.</div>
         </div>
-      `).join('')}
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-text">Du erfährst, wie reguliert dein Nervensystem gerade ist — in verständlicher Sprache, ohne Fachbegriffe.</div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-text">Du bekommst passende erste Schritte direkt in dein Postfach — kostenlos, persönlich, umsetzbar.</div>
+        </div>
+      </div>
     </div>
 
-    <p class="email-note">📬 Du bekommst gleich eine E-Mail mit noch mehr Tipps speziell für dein Nervensystem.</p>
-
-    <div class="cta-group">
-      <a href="https://www.doctolib.de" class="btn-cta">Über Doctolib buchen →</a>
-      <span class="cta-divider">oder</span>
-      <a href="mailto:lisa.goldschmidt@stressfrei-er-leben.de?subject=Erstgespräch%20anfragen" class="btn-cta-outline">Per E-Mail anfragen →</a>
+    <!-- Bottom CTA -->
+    <div class="bottom-cta">
+      <h2>Dein Körper wartet schon eine Weile.</h2>
+      <p>Es dauert nur 3 Minuten — und es könnte der erste Schritt sein, ihn endlich zu verstehen.</p>
+      <a href="quiz.html" class="cta-btn">Quiz starten →</a>
+      <p class="cta-note">Kein Spam. Kein Verkaufsdruck. Nur ehrliche Infos.</p>
     </div>
-  `;
 
-  setTimeout(() => {
-    document.getElementById('score-bar').style.width = score + '%';
-  }, 100);
-}
-
-init();
-</script>
+  </div>
 </body>
 </html>
