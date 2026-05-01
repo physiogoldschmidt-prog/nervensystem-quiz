@@ -102,7 +102,7 @@ exports.handler = async (event) => {
           <p style="font-size:13px;color:#b0a898;line-height:1.6;">
             Lisa Goldschmidt · Stressfrei-er-leben.de · Berlin<br/>
             Du erhältst diese E-Mail weil du am Nervensystem-Quiz teilgenommen hast.<br/>
-            <a href="#" style="color:#b0a898;">Abmelden</a>
+            <a href="https://super-nasturtium-992bd1.netlify.app/.netlify/functions/unsubscribe?email=${encodeURIComponent(email)}" style="color:#b0a898;">Vom E-Mail-Verteiler abmelden</a>
           </p>
         </div>
       `
