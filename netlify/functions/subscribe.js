@@ -93,8 +93,14 @@ exports.handler = async (event) => {
           </p>
 
           <a href="https://www.doctolib.de"
-             style="display:inline-block;background:#2d4a3e;color:#fff;padding:14px 32px;border-radius:50px;text-decoration:none;font-size:15px;margin-bottom:32px;">
-            Erstgespräch buchen →
+             style="display:inline-block;background:#2d4a3e;color:#fff;padding:14px 32px;border-radius:50px;text-decoration:none;font-size:15px;margin-bottom:12px;">
+            Über Doctolib buchen →
+          </a>
+          <br/>
+          <p style="font-size:13px;color:#b0a898;margin:4px 0 8px;">oder</p>
+          <a href="mailto:lisa.goldschmidt@stressfrei-er-leben.de?subject=Erstgespräch%20anfragen"
+             style="display:inline-block;background:transparent;color:#2d4a3e;padding:13px 32px;border-radius:50px;text-decoration:none;font-size:15px;border:2px solid #2d4a3e;margin-bottom:32px;">
+            Per E-Mail anfragen →
           </a>
 
           <hr style="border:none;border-top:1px solid #e8e2d8;margin-bottom:24px;" />

@@ -336,6 +336,34 @@
     }
     .btn-cta:hover { background: #1e3329; }
 
+    .btn-cta-outline {
+      background: transparent;
+      color: #2d4a3e;
+      font-size: 16px;
+      padding: 15px 40px;
+      border-radius: 50px;
+      display: inline-block;
+      text-decoration: none;
+      font-family: inherit;
+      cursor: pointer;
+      border: 2px solid #2d4a3e;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-cta-outline:hover { background: #2d4a3e; color: #fff; }
+
+    .cta-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .cta-divider {
+      font-size: 13px;
+      color: #b0a898;
+    }
+
     /* Kategoriefarben */
     .cat-gut { background: #d4edda; color: #1e6b3a; }
     .cat-gut .result-score-bar { background: #4CAF50; }
@@ -684,7 +712,11 @@ function zeigeErgebnis(score, name) {
 
     <p class="email-note">📬 Du bekommst gleich eine E-Mail mit noch mehr Tipps speziell für dein Nervensystem.</p>
 
-    <a href="https://www.doctolib.de" class="btn-cta">Erstgespräch buchen →</a>
+    <div class="cta-group">
+      <a href="https://www.doctolib.de" class="btn-cta">Über Doctolib buchen →</a>
+      <span class="cta-divider">oder</span>
+      <a href="mailto:lisa.goldschmidt@stressfrei-er-leben.de?subject=Erstgespräch%20anfragen" class="btn-cta-outline">Per E-Mail anfragen →</a>
+    </div>
   `;
 
   setTimeout(() => {
